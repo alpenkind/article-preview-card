@@ -1,4 +1,7 @@
-html {
+/*General Stylings*/
+
+:root {
+  box-sizing: border-box;
   font-family: sans-serif;
   font-size: 20px;
   --accent-color1: #483d8b;
@@ -17,110 +20,111 @@ html {
     "first-card second-card";
 }
 
+/*Specific Stylings*/
+
 .heading {
   grid-area: header;
   margin: 1rem;
 }
 
-.preview-card {
+.container-card {
   display: grid;
-  align-items: center;
   padding: 1rem;
 }
-.first-card {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   grid-area: first-card;
   max-width: 400px;
   height: 650px;
   border: solid black 3px;
   padding: 1rem;
   border-radius: 0.75rem;
+}
+
+.first-card {
   box-shadow: 0.75rem 0.35rem var(--accent-color1);
 }
 
 .second-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  grid-area: second-card;
-  width: 400px;
-  height: 650px;
-  border: solid black 3px;
-  padding: 1rem;
-  border-radius: 0.75rem;
   box-shadow: 0.75rem 0.35rem var(--accent-color2);
 }
 
 .cover-photo {
-  display: flex;
-  justify-content: center;
   align-self: center;
-  width: 400px;
-  height: 200px;
-  margin: 1rem;
-  border-radius: 5px;
+  width: 20rem;
+  height: 10rem;
+  margin: 0.25rem 1rem 1.5rem;
+  border-radius: 0.25rem;
 }
 
 .card-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
-  width: 100%;
+  margin-bottom: 0.75rem;
   font-size: 0.75rem;
 }
 
 .date {
-  _display: flex;
   position: relative;
-  left: -6rem;
   color: var(--color-publish-info);
 }
 
 .author-picture {
-  _display: inline;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.5rem;
 }
 
 .author {
-  _display: inline;
   color: var(--color-publish-info);
 }
 
-.button {
+.category-buttons {
+  background-color: var(--bg-category-color);
+  border: none;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  border-radius: 0.75rem;
+  width: 4rem;
+}
+
+.read-button {
   border: none;
   flex-direction: row;
   justify-content: flex-start;
   align-self: flex-start;
   color: white;
-  padding: 0.75rem;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
 }
 
-.first-card button {
+.first-card .read-button {
   background-color: var(--accent-color1);
 }
-.first-card h2 {
-  align-self: flex-start;
-}
 
-.second-card button {
+.second-card .read-button {
   background-color: var(--accent-color2);
 }
 
-.second-card h2 {
+.first-card .date {
+  right: 6.5rem;
+}
+
+.second-card .date {
+  right: 6rem;
+}
+
+.card h2 {
   align-self: flex-start;
+  margin: 1.5rem 0rem 0.5rem;
 }
 
 .first-card .author-picture {
-  border: solid 5px var(--accent-color1);
+  border: solid 0.25rem var(--accent-color1);
 }
 
 .second-card .author-picture {
