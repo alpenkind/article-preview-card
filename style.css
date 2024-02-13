@@ -1,0 +1,128 @@
+html {
+  font-family: sans-serif;
+  font-size: 20px;
+  --accent-color1: #483d8b;
+  --accent-color2: #ff8c00;
+  --bg-category-color: #00bfff;
+  --color-publish-info: #7f7f7f;
+  --fontsize-general: 1rem;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header"
+    "first-card second-card";
+}
+
+.heading {
+  grid-area: header;
+  margin: 1rem;
+}
+
+.preview-card {
+  display: grid;
+  align-items: center;
+  padding: 1rem;
+}
+.first-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: first-card;
+  max-width: 400px;
+  height: 650px;
+  border: solid black 3px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0.75rem 0.35rem var(--accent-color1);
+}
+
+.second-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: second-card;
+  width: 400px;
+  height: 650px;
+  border: solid black 3px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0.75rem 0.35rem var(--accent-color2);
+}
+
+.cover-photo {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 400px;
+  height: 200px;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  font-size: 0.75rem;
+}
+
+.date {
+  _display: flex;
+  position: relative;
+  left: -6rem;
+  color: var(--color-publish-info);
+}
+
+.author-picture {
+  _display: inline;
+  border-radius: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.author {
+  _display: inline;
+  color: var(--color-publish-info);
+}
+
+.button {
+  border: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: flex-start;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 5px;
+}
+
+.first-card button {
+  background-color: var(--accent-color1);
+}
+.first-card h2 {
+  align-self: flex-start;
+}
+
+.second-card button {
+  background-color: var(--accent-color2);
+}
+
+.second-card h2 {
+  align-self: flex-start;
+}
+
+.first-card .author-picture {
+  border: solid 5px var(--accent-color1);
+}
+
+.second-card .author-picture {
+  border: solid 5px var(--accent-color2);
+}
