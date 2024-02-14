@@ -26,7 +26,7 @@
   grid-area: header;
   margin: 1rem;
 }
-
+/*Styling applying to both Article Sections/Cards*/
 .container-card {
   display: grid;
   padding: 1rem;
@@ -41,14 +41,6 @@
   border: solid black 3px;
   padding: 1rem;
   border-radius: 0.75rem;
-}
-
-.first-card {
-  box-shadow: 0.75rem 0.35rem var(--accent-color1);
-}
-
-.second-card {
-  box-shadow: 0.75rem 0.35rem var(--accent-color2);
 }
 
 .cover-photo {
@@ -102,6 +94,20 @@
   border-radius: 0.25rem;
 }
 
+.card h2 {
+  align-self: flex-start;
+  margin: 1.5rem 0rem 0.5rem;
+}
+
+/*Specific Stylings for each Card*/
+.first-card {
+  box-shadow: 0.75rem 0.35rem var(--accent-color1);
+}
+
+.second-card {
+  box-shadow: 0.75rem 0.35rem var(--accent-color2);
+}
+
 .first-card .read-button {
   background-color: var(--accent-color1);
 }
@@ -116,11 +122,6 @@
 
 .second-card .date {
   right: 6rem;
-}
-
-.card h2 {
-  align-self: flex-start;
-  margin: 1.5rem 0rem 0.5rem;
 }
 
 .first-card .author-picture {
